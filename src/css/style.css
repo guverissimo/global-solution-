@@ -61,4 +61,44 @@ html, body {
   padding: 0.5rem;
   font-size: 1.1111111111rem;
   border: none;
+}
+
+.dashboard-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard-container .modal-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 2rem;
+}
+.dashboard-container .modal-button .open-modal-button {
+  width: 80%;
+  margin: 0 auto;
+}
+.dashboard-container .remedios-section .card-remedio {
+  background-color: #132aac;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border-radius: 20px;
+}
+.dashboard-container .remedios-section .card-remedio h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.dashboard-container .remedios-section .card-remedio h3 {
+  margin: 0 10px;
+  font-size: 1.3043478261rem;
+  color: #dadada;
+}
+.dashboard-container .remedios-section .card-remedio .card-quantidade {
+  margin-top: 10px;
+}
+.dashboard-container .remedios-section .card-remedio .card-quantidade p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -9,10 +9,6 @@ const Dashboard = () => {
   const [estoque, setEstoque] = useState([]);
   const [novo, setNovo] = useState({ ...estoque, nome: "", qtd: "" });
 
-  const handleLogout = () => {
-    sessionStorage.removeItem("usuarioLogado");
-    window.location = "/";
-  };
   // Adicionar Novo Remedio
   const handleChange = (e) => {
     setNovo({ ...novo, [e.target.name]: e.target.value });
@@ -54,18 +50,11 @@ const Dashboard = () => {
 
   console.log(allData);
   return (
-    <>
       <div className="dashboard-container">
-        <div className="">
-          <p>
-            {usuarioLogado != null ? `Cliente: ${usuarioLogado.usuario}` : ""}
-          </p>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-        <div>
+        <div className="modal-button">
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-primary open-modal-button"
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
           >
@@ -128,17 +117,24 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="remedios-section">
           {estoque.map((r) => {
             return (
               <>
-                <p key={r.nome}>{r.nome}</p>
+              <div className="card-remedio">
+                <h1 key={r.nome}>{r.nome}</h1>
+                <h3 key={r.nome}>{r.razaoSocial}</h3>
+                <h3 key={r.nome}>{r.cnpj}</h3>
+                <div className="card-quantidade">
+                  <p>Quantidade no estoque</p>
+                  <h1 key={r.nome}>{r.qtd}</h1>
+                </div>
+              </div>
               </>
             );
           })}
         </div>
       </div>
-    </>
   );
 };
 

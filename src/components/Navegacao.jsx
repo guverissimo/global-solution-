@@ -16,10 +16,12 @@ const Navegacao = () => {
         <div className="container-fluid">
           <a className="navbar-brand">Navbar</a> 
           <div>
-            <Link to='/'>Home</Link>
+            <Link className="link-navbar" to='/'>Home</Link>
+            {usuarioLogado !=null ? <Link className="link-navbar" to='/dashboard'>Dashboard</Link> : ""}
           </div>
           <div className="d-flex">
-            {usuarioLogado != null ? <button className="btn btn-primary bg-dark" onClick={handleLogout}>Logout</button> : <button className="btn btn-primary bg-dark"><Link to='/login'>Login</Link></button>}
+            {usuarioLogado != null ? (<button className="btn btn-primary bg-dark" onClick={handleLogout}>Logout</button>
+  ) : <button className="btn btn-primary bg-dark"><Link to='/login'>Login</Link></button>}
           </div>
         </div>
       </nav>
