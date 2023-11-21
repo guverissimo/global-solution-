@@ -2,14 +2,42 @@
   "usuarios":[
       {
         "usuario":"Admin",
-        "senha":"12345"
-      },
-      {
-        "usuario":"Funcionario",
-        "senha":"123456"
+        "senha":"12345",
+        "estoque": {
+          "remedios": [
+            {
+              "nome": "Amoxicilina",
+              "qtd": 10
+            },
+            {
+              "nome": "Amoxicilina 500mg",
+              "qtd": 10
+            },
+            {
+              "nome": "Rivotril",
+              "qtd": 10
+            },
+            {
+              "nome": "Rivotril 20mg",
+              "qtd": 10
+            }
+          ]
+        }
+      },{
+        "usuario":"notredame",
+        "senha":"12345",
+        "estoque": {
+          "remedios": [
+            {
+              "nome": "Amoxicilina",
+              "qtd": 10
+            },
+            {
+              "nome": "Rivotril 10mg",
+              "qtd": 10
+            }
+          ]
+        }
       }
-  ],
-  "remedios": [
-
   ]
 }
