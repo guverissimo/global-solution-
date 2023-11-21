@@ -1,6 +1,7 @@
 {
   "usuarios":[
       {
+        "id": 1,
         "usuario":"Admin",
         "senha":"12345",
         "estoque": {
@@ -23,7 +24,9 @@
             }
           ]
         }
-      },{
+      },
+      {
+        "id": 2,
         "usuario":"notredame",
         "senha":"12345",
         "estoque": {
