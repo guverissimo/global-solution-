@@ -1,7 +1,15 @@
-import {} from "react";
+import {useState} from "react";
 import { Link } from "react-router-dom";
 
 const Navegacao = () => {
+
+  const [usuarioLogado] = useState(
+    JSON.parse(sessionStorage.getItem("usuarioLogado"))
+  );
+  const handleLogout = () => {
+    sessionStorage.removeItem("usuarioLogado");
+    window.location = "/";
+  };
   return (
     <>
       <nav className="navbar bg-body-tertiary">
@@ -11,7 +19,7 @@ const Navegacao = () => {
             <Link to='/'>Home</Link>
           </div>
           <div className="d-flex">
-            <button className="btn btn-primary"><Link to='/login'>Login</Link></button>
+            {usuarioLogado != null ? <button className="btn btn-primary bg-dark" onClick={handleLogout}>Logout</button> : <button className="btn btn-primary bg-dark"><Link to='/login'>Login</Link></button>}
           </div>
         </div>
       </nav>

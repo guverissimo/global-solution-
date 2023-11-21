@@ -1,1 +1,64 @@
-/*# sourceMappingURL=style.css.map */
+html, body {
+  font-family: "Roboto", sans-serif;
+}
+
+.app-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 1440px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto 4fr 1fr;
+  grid-template-areas: "header header" "main main" "footer footer";
+  margin: auto;
+}
+.app-container .navegacao {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  grid-area: header;
+}
+.app-container .principal {
+  width: 100%;
+  grid-area: main;
+  padding: 0;
+  margin: 0;
+}
+.app-container .rodape {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  grid-area: footer;
+}
+
+.login-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.login-container .header {
+  text-align: center;
+}
+.login-container form {
+  height: 200px;
+}
+.login-container form input {
+  width: 20rem;
+  padding-top: 2rem;
+  font-size: 1.3636363636rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+}
+.login-container form button {
+  margin-top: 1rem;
+  width: 20rem;
+  padding: 0.5rem;
+  font-size: 1.1111111111rem;
+  border: none;
+}/*# sourceMappingURL=style.css.map */
