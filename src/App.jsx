@@ -14,9 +14,6 @@ function App() {
         <section className="principal">
           <Outlet  />
         </section>
-        <div className="rodape" >
-          <Rodape />
-        </div>
       </div>
     </>
   );

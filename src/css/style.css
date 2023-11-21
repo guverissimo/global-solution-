@@ -10,8 +10,8 @@ html, body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: auto 4fr 1fr;
-  grid-template-areas: "header header" "main main" "footer footer";
+  grid-auto-rows: auto 4fr;
+  grid-template-areas: "header header" "main main";
   margin: auto;
 }
 .app-container .navegacao {
@@ -25,12 +25,6 @@ html, body {
   grid-area: main;
   padding: 0;
   margin: 0;
-}
-.app-container .rodape {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  grid-area: footer;
 }
 
 .login-container {
@@ -64,27 +58,35 @@ html, body {
 }
 
 .dashboard-container {
+  margin-top: 1rem;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 4fr;
+  grid-template-areas: "modal" "card ";
 }
 .dashboard-container .modal-button {
+  grid-area: modal;
   width: 100%;
   display: flex;
   align-items: center;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0;
+  justify-items: center;
 }
 .dashboard-container .modal-button .open-modal-button {
   width: 80%;
   margin: 0 auto;
+  height: 3rem;
 }
 .dashboard-container .remedios-section {
+  grid-area: card;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: #546dfc;
   border-radius: 40px 40px 0 0;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 2rem;
+  padding-right: 1rem;
 }
 .dashboard-container .remedios-section .card-remedio {
   background-color: #0a1763;
@@ -109,4 +111,40 @@ html, body {
 }
 .dashboard-container .remedios-section .card-remedio .card-quantidade p {
   margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard-container .remedios-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "modal card";
+  }
+  .dashboard-container .modal-button {
+    align-items: start;
+  }
+  .dashboard-container .remedios-section {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 40px 0 0 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dashboard-container .remedios-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.nevegacao-container {
+  background-color: #546dfc;
+}
+.nevegacao-container .navbar .container-fluid .links-navbar {
+  display: flex;
+  gap: 1rem;
+}
+.nevegacao-container .navbar .container-fluid .links-navbar .link-navbar {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,23 +1,31 @@
 @import '../abs/_var'
 .dashboard-container
+    margin-top: 1rem 
     width: 100%
     height: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: auto 4fr
+    grid-template-areas: "modal" "card "
     .modal-button
+        grid-area: modal
         width: 100%
         display: flex
         align-items: center
-        margin: 1rem 0 2rem 
+        margin: 1rem 0
+        justify-items: center
         .open-modal-button
             width: 80%
             margin: 0 auto
+            height: 3rem
     .remedios-section
-        background-color: #546dfc
+        grid-area: card
+        display: grid
+        grid-template-columns: 1fr 
+        background-color: $bg-cor1
         border-radius: 40px 40px 0 0
-        padding-top: 2rem
-        padding-bottom: 1rem
+        padding: 2rem
+        padding-right: 1rem 
         .card-remedio
             background-color: #0a1763
             padding: 20px 
@@ -37,3 +45,24 @@
                 text-align: center
                 p
                     margin: 0
+
+
+@media screen and (min-width: 768px)
+    .dashboard-container
+        .remedios-section
+            grid-template-columns: 1fr 1fr
+@media screen and (min-width: 992px)
+    .dashboard-container
+        grid-template-columns: 1fr 2fr
+        grid-template-areas: "modal card" 
+        .modal-button
+            align-items: start
+        .remedios-section
+            
+            grid-template-columns: 1fr 1fr
+            border-radius: 40px 0 0 40px
+
+@media screen and (min-width: 1200px)
+    .dashboard-container
+        .remedios-section
+            grid-template-columns: 1fr 1fr 1fr
