@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Login() {
   //hooks
@@ -17,7 +17,7 @@ function Login() {
 
     let user;
     try {
-      const response = await fetch("  http://localhost:5000/usuarios");
+      const response = await fetch("  http://localhost:5001/usuarios");
       if (response.ok) {
         const users = await response.json();
 
@@ -35,7 +35,7 @@ function Login() {
         if (user) {
           sessionStorage.setItem("usuarioLogado", JSON.stringify(user));
           setTimeout(() => {
-            window.location = "/dashboard";
+            window.location = `/dashboard/${user.id}`;
           }, 1000);
         } else {
           setTimeout(() => {
@@ -57,6 +57,14 @@ function Login() {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    fetch(`http://localhost:5001/usuarios`)
+    .then((res)=> {return res.json()})
+    .then((data) => {
+      setUsuarios(data)
+    })
+  },[])
 
   return (
       <div className="login-container">

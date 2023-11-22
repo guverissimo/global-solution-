@@ -94,6 +94,9 @@ html, body {
   margin: 10px 20px;
   color: white;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .dashboard-container .remedios-section .card-remedio h1 {
   font-size: 2rem;

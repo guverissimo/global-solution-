@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Dashboard = () => {
+  let {id} = useParams()
+
   const [allData, setAllData] = useState();
   const [usuarioLogado] = useState(
     JSON.parse(sessionStorage.getItem("usuarioLogado"))
   );
   const [userID, setUserID] = useState();
   const [estoque, setEstoque] = useState([]);
-  const [novo, setNovo] = useState({ ...estoque, nome: "", qtd: "" });
-
+  const [novo, setNovo] = useState( {
+    nome: '',
+    razaoSocial: "",
+    cnpj: '',
+    qtd: ''
+  });
   // Adicionar Novo Remedio
   const handleChange = (e) => {
     setNovo({ ...novo, [e.target.name]: e.target.value });
@@ -17,20 +24,22 @@ const Dashboard = () => {
   // Adicionar Novo Remedio
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    fetch(`http://localhost:5000/usuarios/${userID}`, {
-      method: "post",
+    estoque.push(novo)
+    console.log(allData)
+    fetch(`http://localhost:5001/usuarios/${id}`, {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(novo),
+      body: JSON.stringify(allData),
     }).then(() => {
-      window.location = "/dashboard";
+      console.log("Feito");
+      // console.log(allData)
     });
   };
-
+// Effect para pegar o estoque
   useEffect(() => {
-    fetch("http://localhost:5000/usuarios")
+    fetch(`http://localhost:5001/usuarios`)
       .then((res) => {
         return res.json();
       })
@@ -46,9 +55,14 @@ const Dashboard = () => {
           }
         }
       });
-  }, []);
+  }, [userID]);
 
-  console.log(allData);
+  const teste = () => {
+    console.log(userID);
+  }
+
+  
+
   return (
       <div className="dashboard-container">
         <div className="modal-button">
@@ -60,6 +74,7 @@ const Dashboard = () => {
           >
             Adicionar Remedio
           </button>
+          <button onClick={teste}>teste</button>
           <div
             className="modal fade"
             id="staticBackdrop"
@@ -84,6 +99,20 @@ const Dashboard = () => {
                 <div className="modal-body">
                   <form onSubmit={handleSubmit}>
                     <div>
+                      <input
+                        type="text"
+                        name="razaoSocial"
+                        value={novo.razaoSocial}
+                        placeholder="Nome do Fabricante"
+                        onChange={handleChange}
+                      />
+                      <input
+                        type="text"
+                        name="cnpj"
+                        value={novo.cnpj}
+                        placeholder="CNPJ do fabricante"
+                        onChange={handleChange}
+                      />
                       <input
                         type="text"
                         name="nome"
@@ -120,17 +149,15 @@ const Dashboard = () => {
         <div className="remedios-section">
           {estoque.map((r) => {
             return (
-              <>
-              <div className="card-remedio">
-                <h1 key={r.nome}>{r.nome}</h1>
-                <h3 key={r.nome}>{r.razaoSocial}</h3>
-                <h3 key={r.nome}>{r.cnpj}</h3>
+              <div key={r.nome} className="card-remedio">
+                <h1 >{r.nome}</h1>
+                <h3>{r.razaoSocial}</h3>
+                <h3 >{r.cnpj}</h3>
                 <div className="card-quantidade">
                   <p>Quantidade no estoque</p>
-                  <h1 key={r.nome}>{r.qtd}</h1>
+                  <h1>{r.qtd}</h1>
                 </div>
               </div>
-              </>
             );
           })}
         </div>
