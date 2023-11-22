@@ -1,10 +1,14 @@
 html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
 .app-container {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   width: 100%;
   max-width: 1440px;
   height: 100vh;
@@ -18,6 +22,7 @@ html, body {
   width: 100%;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   grid-area: header;
 }
 .app-container .principal {
@@ -25,6 +30,7 @@ html, body {
   grid-area: main;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .login-container {
@@ -150,4 +156,113 @@ html, body {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
+}
+
+.home-container {
+  width: 100%;
+}
+.home-container .banner {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: 0;
+}
+.home-container .banner img {
+  width: 100%;
+}
+.home-container .banner title h1 {
+  text-align: center;
+}
+.home-container h5 {
+  margin: 0;
+  padding: 1rem;
+  background-color: #181818;
+  color: #fff;
+}
+.home-container .funcionamento {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+.home-container .funcionamento header h1 {
+  color: #546dfc;
+  text-align: center;
+  font-size: 2.3076923077rem;
+}
+.home-container .funcionamento .funcionamento-content .funcionamento-pedido .imagem {
+  text-align: center;
+}
+.home-container .funcionamento .funcionamento-content .funcionamento-pedido .imagem img {
+  width: 300px;
+}
+.home-container .funcionamento .funcionamento-content .funcionamento-pedido .texto p {
+  background-color: #546dfc;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.home-container .vantagens header {
+  text-align: center;
+}
+.home-container .vantagens header h1 {
+  font-size: 2.3076923077rem;
+  color: #546dfc;
+}
+.home-container .vantagens .lista ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+.home-container .vantagens .lista ul li p {
+  margin: 0;
+}
+.home-container .contrate {
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #181818;
+  color: #FFF;
+}
+.home-container .contrate header p, .home-container .contrate header h1 {
+  margin: 0;
+}
+.home-container .contrate form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+.home-container .contrate form input {
+  width: 350px;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+  color: #546dfc;
+  border: 1px solid #546dfc;
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+  font-size: 1.1538461538rem;
+}
+.home-container .contrate form button {
+  width: 350px;
+  margin: 8px;
+  height: 40px;
+  background-color: #546dfc;
+  border: none;
+  color: white;
+}
+.home-container .contrate form .submit {
+  width: 350px;
+  border: 1px solid green;
+  height: 40px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
 }/*# sourceMappingURL=style.css.map */
