@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsSearch, BsCartCheck, BsDashCircle  } from "react-icons/bs";
+import { BsSearch, BsCartCheck, BsDashCircle } from "react-icons/bs";
 
 const Pedido = () => {
   const [remedio, setRemedio] = useState("");
@@ -41,8 +41,13 @@ const Pedido = () => {
     <>
       <div className="pedido">
         <div className="carrinho">
-          <h1> {carrinho} <BsCartCheck /></h1>
-          <button onClick={deleteCarrinho}><BsDashCircle /></button>
+          <h1>
+            {" "}
+            {carrinho} <BsCartCheck />
+          </h1>
+          <button onClick={deleteCarrinho}>
+            <BsDashCircle />
+          </button>
         </div>
         <form onSubmit={serachDrug}>
           <input
@@ -56,37 +61,41 @@ const Pedido = () => {
             <BsSearch />
           </button>
         </form>
-        {valid ? (
-          <>
-            <p className="sub-info">
-              Resultado da busca {remedio}: <br />
-              Total {result.numberOfElements}
-            </p>
-            {drugs.map((item) => {
-              return (
-                <div className="drug" key={item.idProduto}>
-                  <p>ID: {item.idProduto}</p>
-                  <h1>{item.nomeProduto}</h1>
-                  <div className="product-owner">
-                    <p>Fabricante:</p>
-                    <p>{item.razaoSocial}</p>
-                    <p>CNPJ: {item.cnpj}</p>
-                  </div>
-                  <div className="buttons">
-                    <button className="add" onClick={addCarrinho}>
-                      Adicionar a lista
-                    </button>
-                    <button className="remove" onClick={removeCarrinho}>
-                      Remover da lista
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </>
-        ) : (
-          ""
-        )}
+        <div className="api">
+          {valid ? (
+            <>
+              <p className="sub-info">
+                Resultado da busca {remedio}: <br />
+                Total {result.numberOfElements}
+              </p>
+              <div className="drugs">
+                {drugs.map((item) => {
+                  return (
+                    <div className="drug" key={item.idProduto}>
+                      <p>ID: {item.idProduto}</p>
+                      <h1>{item.nomeProduto}</h1>
+                      <div className="product-owner">
+                        <p>Fabricante:</p>
+                        <p>{item.razaoSocial}</p>
+                        <p>CNPJ: {item.cnpj}</p>
+                      </div>
+                      <div className="buttons">
+                        <button className="add" onClick={addCarrinho}>
+                          Adicionar a lista
+                        </button>
+                        <button className="remove" onClick={removeCarrinho}>
+                          Remover da lista
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </>
   );

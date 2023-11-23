@@ -393,21 +393,23 @@ h1, p {
 }
 .pedido .carrinho {
   position: fixed;
-  top: 85%;
-  left: 70%;
+  top: 80vh;
+  left: 85%;
   background-color: green;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  color: #FFF;
 }
 .pedido .carrinho button {
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
+  color: #FFF;
 }
 .pedido form {
   display: flex;
@@ -432,51 +434,90 @@ h1, p {
   background-color: transparent;
   border: none;
 }
-.pedido .sub-info {
+.pedido .api {
+  display: flex;
+  flex-direction: column;
+}
+.pedido .api .sub-info {
+  grid-area: info;
   text-align: center;
   margin: 10px;
 }
-.pedido .drug {
+.pedido .api .drugs {
+  margin: 0 auto;
+}
+.pedido .api .drugs .drug {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   background-color: #242424;
   color: #fff;
   padding: 1rem;
-  margin: 1rem;
+  margin: 5px;
   border-radius: 10px;
+  width: 350px;
+  height: 280px;
 }
-.pedido .drug p {
+.pedido .api .drugs .drug p {
   color: #d4d4d4;
 }
-.pedido .drug .product-owner {
+.pedido .api .drugs .drug .product-owner {
   margin: 10px 0;
 }
-.pedido .drug .product-owner p {
+.pedido .api .drugs .drug .product-owner p {
   color: #d4d4d4;
 }
-.pedido .buttons {
+.pedido .api .drugs .buttons {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 5px;
 }
-.pedido .buttons .add {
+.pedido .api .drugs .buttons .add {
   background-color: green;
   color: white;
   border: none;
   padding: 10px;
   border-radius: 10px;
 }
-.pedido .buttons .add:hover {
+.pedido .api .drugs .buttons .add:hover {
   box-shadow: 1px 1px 7px 1px green;
 }
-.pedido .buttons .remove {
+.pedido .api .drugs .buttons .remove {
   background-color: red;
   color: white;
   border: none;
   padding: 10px;
   border-radius: 10px;
 }
-.pedido .buttons .remove:hover {
+.pedido .api .drugs .buttons .remove:hover {
   box-shadow: 1px 1px 7px 1px red;
+}
+
+@media screen and (min-width: 768px) {
+  .carrinho {
+    position: fixed;
+    top: 80%;
+  }
+  .drugs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .drugs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .carrinho {
+    position: fixed;
+    top: 9%;
+    left: 90%;
+  }
+  .drugs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
