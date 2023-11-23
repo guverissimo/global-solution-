@@ -1,0 +1,78 @@
+@import '../abs/_var'
+.pedido
+    .carrinho
+        position: fixed
+        top: 85%
+        left: 70%
+        background-color: green
+        border-radius: 50%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 100px
+        height: 100px
+        
+        button
+            background-color: transparent
+            border: none
+            font-size: calc( $font-size/2  )
+
+    form
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 1rem
+        gap: 10px
+        input
+            width: 330px
+            height: 40px
+            text-align: center
+            border: none
+            border-bottom: 2px solid $bg-cor1 
+            outline: none
+            font-size: calc( $font-size/2.5  )
+        button
+            font-size: calc( $font-size/2  )
+            height: 40px
+            text-align: center
+            background-color: transparent
+            border: none
+    .sub-info
+        text-align: center
+        margin: 10px 
+    .drug
+        display: flex
+        flex-direction: column
+        background-color: #242424
+        color: #fff
+        padding: 1rem
+        margin: 1rem
+        border-radius: 10px 
+        p 
+            color: #d4d4d4
+        .product-owner
+            margin: 10px 0
+            p
+                color: #d4d4d4
+    .buttons
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin: 5px
+        .add 
+            background-color: green 
+            color: white
+            border: none
+            padding: 10px
+            border-radius: 10px 
+            &:hover  
+                box-shadow: 1px 1px 7px 1px green
+        .remove
+            background-color: red 
+            color: white
+            border: none
+            padding: 10px
+            border-radius: 10px 
+            &:hover  
+                box-shadow: 1px 1px 7px 1px red

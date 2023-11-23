@@ -5,6 +5,10 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
+h1, p {
+  margin: 0;
+}
+
 .app-container {
   padding: 0;
   margin: 0;
@@ -76,14 +80,16 @@ html, body {
   grid-area: modal;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: 1rem 0;
-  justify-items: center;
+  justify-content: start;
 }
 .dashboard-container .modal-button .open-modal-button {
   width: 80%;
   margin: 0 auto;
   height: 3rem;
+  margin-bottom: 1rem;
 }
 .dashboard-container .remedios-section {
   grid-area: card;
@@ -161,6 +167,16 @@ html, body {
 .home-container {
   width: 100%;
 }
+.home-container .sub-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #181818;
+  height: 50px;
+  align-items: center;
+}
+.home-container .sub-nav a:hover {
+  color: #FFF;
+}
 .home-container .banner {
   width: 100%;
   height: 100%;
@@ -170,14 +186,22 @@ html, body {
 .home-container .banner img {
   width: 100%;
 }
-.home-container .banner title h1 {
-  text-align: center;
+.home-container .banner .title {
+  margin: 1rem;
 }
-.home-container h5 {
+.home-container .banner .title h1 {
+  text-align: center;
+  padding: 1rem;
   margin: 0;
+  background-color: #546dfc;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+.home-container .banner .title h5 {
   padding: 1rem;
   background-color: #181818;
   color: #fff;
+  border-radius: 0 0 20px 20px;
 }
 .home-container .funcionamento {
   margin-top: 1rem;
@@ -265,4 +289,194 @@ html, body {
   align-items: center;
   justify-content: center;
   background-color: green;
+}
+
+@media screen and (min-width: 768px) {
+  .home-container .banner {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+  }
+  .home-container .banner img {
+    width: 100%;
+  }
+  .home-container .banner .title {
+    margin: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .home-container .banner .title h1 {
+    text-align: center;
+    height: 170;
+    padding: 1rem;
+    margin: 0;
+    background-color: #546dfc;
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+  }
+  .home-container .banner .title h5 {
+    padding: 1rem;
+    height: 180px;
+    background-color: #181818;
+    color: #fff;
+    border-radius: 20px 0 0 20px;
+    margin: 0;
+  }
+  .home-container .funcionamento .funcionamento-content .funcionamento-pedido {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 12rem;
+    gap: 1rem;
+  }
+  .home-container .contrate {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #181818;
+    color: #FFF;
+  }
+}
+.rodape {
+  width: 100%;
+  background-color: #181818;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.rodape .duvida {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.rodape .duvida h1 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+.rodape .duvida a {
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: #546dfc;
+  color: #FFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.rodape .duvida a:hover {
+  background-color: #fff;
+  color: #546dfc;
+}
+.rodape .redes {
+  width: 100%;
+}
+.rodape .redes .sociais {
+  text-align: center;
+}
+.rodape .redes .sociais a {
+  margin: 0 10px;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .rodape {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.pedido .carrinho {
+  position: fixed;
+  top: 85%;
+  left: 70%;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+}
+.pedido .carrinho button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+.pedido form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 10px;
+}
+.pedido form input {
+  width: 330px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #546dfc;
+  outline: none;
+  font-size: 1.2rem;
+}
+.pedido form button {
+  font-size: 1.5rem;
+  height: 40px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+.pedido .sub-info {
+  text-align: center;
+  margin: 10px;
+}
+.pedido .drug {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  color: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+.pedido .drug p {
+  color: #d4d4d4;
+}
+.pedido .drug .product-owner {
+  margin: 10px 0;
+}
+.pedido .drug .product-owner p {
+  color: #d4d4d4;
+}
+.pedido .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5px;
+}
+.pedido .buttons .add {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.pedido .buttons .add:hover {
+  box-shadow: 1px 1px 7px 1px green;
+}
+.pedido .buttons .remove {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.pedido .buttons .remove:hover {
+  box-shadow: 1px 1px 7px 1px red;
 }/*# sourceMappingURL=style.css.map */

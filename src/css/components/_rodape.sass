@@ -1,0 +1,43 @@
+@import '../abs/_var'
+.rodape
+    width: 100%
+    background-color: #181818
+    color: #fff
+    padding: 1rem
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    text-align: center
+    .duvida
+        width: 100%
+        display: flex
+        flex-direction: column
+        h1
+            @include reset()
+            margin-bottom: 1rem
+        a
+            width: 100%
+            align-self: center
+            text-align: center
+            padding: 10px 30px
+            background-color: $bg-cor1
+            color: #FFF
+            text-transform: uppercase
+            text-decoration: none
+            border-radius: 10px
+            &:hover
+                background-color: #fff
+                color: $bg-cor1
+    .redes
+        width: 100%
+        .sociais
+            text-align: center
+            a
+                margin: 0 10px
+                font-size: calc( $font-size /1  )        
+
+@media screen and (min-width: 768px)
+    .rodape
+        display: flex
+        flex-direction: row
+        justify-content: space-around

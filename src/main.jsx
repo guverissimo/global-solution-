@@ -6,6 +6,7 @@ import Error from './routes/Error.jsx'
 import Home from './routes/Home.jsx'
 import Login from './routes/Login.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import Pedido from './pages/Pedido.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       {path: '/', element: <Home/>},
       {path: '/login', element: <Login/>},
       {path: '/dashboard', element: <Dashboard/>},
+      {path: '/pedido', element: <Pedido/>},
     ]
   }
 ])

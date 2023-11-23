@@ -18,17 +18,11 @@ const Dashboard = () => {
     setNovo({ ...novo, [e.target.name]: e.target.value });
   };
 
-  // Adicionar Novo Remedio
-
-  function handleDelete(id) {
-    fetch(`http://localhost:5000/usuarios/${id}`, {
-      method: "delete",
-    }).then(() => {
-      console.log("Deletado");
-    });
-
+  const goToPedido = () => {
+    window.location = "/pedido"
   }
 
+  // Adicionar Novo Remedio
   const handleSubmit = (e) => {
     e.preventDefault();
     estoque.push(novo);
@@ -64,10 +58,6 @@ const Dashboard = () => {
       });
   }, [userID]);
 
-  const teste = () => {
-    handleDelete(userID);
-  };
-
   return (
     <div className="dashboard-container">
       <div className="modal-button">
@@ -79,7 +69,6 @@ const Dashboard = () => {
         >
           Adicionar Remedio
         </button>
-        <button onClick={teste}>teste</button>
         <div
           className="modal fade"
           id="staticBackdrop"
@@ -150,6 +139,13 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+        <button
+          type="button "
+          className="btn btn-primary open-modal-button"
+          onClick={goToPedido}
+        >
+          Fazer pedido
+        </button>
       </div>
       
       <div className="remedios-section">

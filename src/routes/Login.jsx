@@ -35,7 +35,7 @@ function Login() {
         if (user) {
           sessionStorage.setItem("usuarioLogado", JSON.stringify(user));
           setTimeout(() => {
-            window.location = `/dashboard/${user.id}`;
+            window.location = `/dashboard/`;
           }, 1000);
         } else {
           setTimeout(() => {
@@ -86,7 +86,7 @@ function Login() {
 
           <div>
             <input
-              type="passoword"
+              type="password"
               name="senha"
               value={usuarios.senha}
               placeholder="Digite sua senha"
