@@ -1,17 +1,17 @@
 import { useState } from "react";
 
 const Login = () => {
+  let [showInfo, setShowInfo] = useState(true);
   const [usuarios, setUsuarios] = useState({
     usuario: "",
     senha: "",
   });
 
-  
-
   const handleChange = async (e) => {
     const { name, value } = e.target;
     setUsuarios({ ...usuarios, [name]: value });
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,14 +30,13 @@ const Login = () => {
             sessionStorage.setItem("usuarioLogado", JSON.stringify(usuarios));
             setTimeout(() => {
               window.location = "/dashboard";
-            }, 1000);
-            break
+            }, 500);
+          }else {
+            setShowInfo(false)
           }
         }
       });
   };
-
-  
 
   return (
     <>
@@ -68,7 +67,7 @@ const Login = () => {
               required
             />
           </div>
-
+          {!showInfo ? (<p>Credenciais incorretas</p>) : ""}
           <button type="submit">Entrar</button>
         </form>
       </div>

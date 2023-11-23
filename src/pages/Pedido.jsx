@@ -105,5 +105,3 @@ const Pedido = () => {
 };
 
 export default Pedido;
-
-// 'AMOXICILINA', expediente: '0772578231', razaoSocial: 'BRAINFARMA INDÚSTRIA QUÍMICA E FARMACÊUTICA S.A', …}cnpj: "05161069000110"data: "2023-07-25T16:00:26.000-0300"dataAtualizacao: "2023-11-22T18:00:27.000-0300"expediente: "0772578231"idBulaPacienteProtegido: "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMDQ5Njk3NiIsIm5iZiI6MTcwMDY5ODY4MywiZXhwIjoxNzAwNjk4OTgzfQ.1C74ZTIq0kVV9fnTycjr0O-jlkvVVPFDePZ7nBditJcfI5YMZFM7L9LaNYsWD8VMKTSIQpLKg9eMp5TgWfugzw"idBulaProfissionalProtegido: "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMDQ5Njk3NyIsIm5iZiI6MTcwMDY5ODY4MywiZXhwIjoxNzAwNjk4OTgzfQ.9XHewEAeaAanNxhOYD_z3dwlOHEAco-Y1LxKKUKVThk4GvmLdq0HoOrrsRbzRNuCTDbkpu4kyEq57KNqth5-qA"idProduto: 801733nomeProduto: "AMOXICILINA"numProcesso: "25351535160201175"numeroRegistro: "155840141"numeroTransacao: "7168512023"razaoSocial: "BRAINFARMA INDÚSTRIA QUÍMICA E FARMACÊUTICA S.A"[[Prototype]]: Object
