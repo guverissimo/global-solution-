@@ -1,7 +1,6 @@
 import {} from "react";
 import Navegacao from "./components/Navegacao";
 import { Outlet } from "react-router-dom";
-import Rodape from "./components/Rodape";
 import "./css/style.css";
 
 function App() {

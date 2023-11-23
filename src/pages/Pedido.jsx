@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsSearch, BsCartCheck, BsDashCircle } from "react-icons/bs";
+import img from '../assets/Mar-business_2.jpg'
 
 const Pedido = () => {
   const [remedio, setRemedio] = useState("");
@@ -93,7 +94,9 @@ const Pedido = () => {
               </div>
             </>
           ) : (
-            ""
+            <>
+              <img className="img-initial" src={img} alt=""/>
+            </>
           )}
         </div>
       </div>

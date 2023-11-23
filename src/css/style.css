@@ -493,6 +493,11 @@ h1, p {
 .pedido .api .drugs .buttons .remove:hover {
   box-shadow: 1px 1px 7px 1px red;
 }
+.pedido .api .img-initial {
+  width: 60%;
+  align-self: center;
+  margin-top: 2rem;
+}
 
 @media screen and (min-width: 768px) {
   .carrinho {
