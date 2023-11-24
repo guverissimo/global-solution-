@@ -92,7 +92,6 @@ h1, p {
 }
 
 .dashboard-container {
-  margin-top: 1rem;
   width: 100%;
   height: 100%;
   display: grid;
@@ -103,29 +102,30 @@ h1, p {
 .dashboard-container .modal-button {
   grid-area: modal;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0;
   justify-content: start;
+  background-color: #1b1b1b;
 }
 .dashboard-container .modal-button .open-modal-button {
   width: 80%;
   margin: 0 auto;
   height: 3rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 .dashboard-container .remedios-section {
   grid-area: card;
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #30acff;
-  border-radius: 40px 40px 0 0;
-  padding: 2rem;
+  background-color: #121212;
+  padding: 3rem 2rem;
   padding-right: 1rem;
 }
 .dashboard-container .remedios-section .card-remedio {
-  background-color: #0a1763;
+  background-color: #1b1b1b;
   padding: 20px;
   margin: 10px 20px;
   color: white;
@@ -167,7 +167,6 @@ h1, p {
   }
   .dashboard-container .remedios-section {
     grid-template-columns: 1fr 1fr;
-    border-radius: 40px 0 0 40px;
   }
 }
 @media screen and (min-width: 1200px) {

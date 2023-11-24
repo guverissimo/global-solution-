@@ -33,6 +33,17 @@ const Home = () => {
               distribuição, administração, monitoramento e utilização de seus
               medicamentos, aumentendo a segurança e a satisfacação de seu
               paciente.
+              A solução desenvolvida pela Medical Tech é projetada para a
+              otimização do atendimento ao paciente, em relação à medição que é
+              aplicada dentro dos hospitais, tal como oferecer ao cliente algo
+              seguro, inteligente aumentando a eficiência do atendimento,
+              beneficiando tanto o hospital quanto o cliente. A nossa tecnologia
+              traz total autonomia para a melhor administração de recursos,
+              armazenamento e distribuição dos medicamentos, sendo a maior
+              vantagem na distribuição da medicação para o paciente Trata-se de
+              uma solução que traz eficiência, segurança tanto na parte de
+              armazenar e monitorar o medicamento, evitando possível falha
+              humana, quanto na questão de confiança de manutenção.
             </h5>
           </div>
         </section>
@@ -98,25 +109,25 @@ const Home = () => {
               </ul>
             </div>
           </section>
-          </section>
-          <section className="contrate" id="contato">
-            <header>
-              <h1>Solicite um orçamento</h1>
-              <p>E eleve seu négocio a outro nível</p>
-            </header>
-            <form onSubmit={handleSubmit}>
-              <input type="text" placeholder="Digite seu Nome" required />
-              <input type="text" placeholder="Digite seu Telefone" required />
-              <input type="email" placeholder="Digite seu E-Mail" required />
-              <button type="submite">Enviar dados</button>
-              {submit ? (
-                <p className="submit">Sucesso! Aguarde nosso contato</p>
-              ) : (
-                ""
-              )}
-            </form>
-          </section>
-        
+        </section>
+        <section className="contrate" id="contato">
+          <header>
+            <h1>Solicite um orçamento</h1>
+            <p>E eleve seu négocio a outro nível</p>
+          </header>
+          <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Digite seu Nome" required />
+            <input type="text" placeholder="Digite seu Telefone" required />
+            <input type="email" placeholder="Digite seu E-Mail" required />
+            <button type="submite">Enviar dados</button>
+            {submit ? (
+              <p className="submit">Sucesso! Aguarde nosso contato</p>
+            ) : (
+              ""
+            )}
+          </form>
+        </section>
+
         <Rodape />
       </div>
     </>

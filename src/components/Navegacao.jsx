@@ -34,7 +34,7 @@ const Navegacao = () => {
                   className="btn myButton"
                   onClick={handleLogout}
                 >
-                  <p className="myBtn-link">myBtn-link</p>
+                  <p className="myBtn-link">Logout</p>
                 </button>
               ) : (
                 <button className="btn btn-primary myButton">
