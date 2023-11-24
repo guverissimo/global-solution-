@@ -26,7 +26,6 @@ const Dashboard = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     estoque.push(novo);
-    console.log(allData);
     fetch(`http://localhost:5001/usuarios`, {
         method: "POST",
         headers: {
@@ -61,84 +60,6 @@ const Dashboard = () => {
   return (
     <div className="dashboard-container">
       <div className="modal-button">
-        <button
-          type="button"
-          className="btn btn-primary open-modal-button"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
-        >
-          Adicionar Remedio
-        </button>
-        <div
-          className="modal fade"
-          id="staticBackdrop"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true"
-        >
-          <div className="modal-dialog">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h1 className="modal-title fs-5" id="staticBackdropLabel">
-                  Adicionar Remedio
-                </h1>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div className="modal-body">
-                <form onSubmit={handleSubmit}>
-                  <div>
-                    <input
-                      type="text"
-                      name="razaoSocial"
-                      value={novo.razaoSocial}
-                      placeholder="Nome do Fabricante"
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="text"
-                      name="cnpj"
-                      value={novo.cnpj}
-                      placeholder="CNPJ do fabricante"
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="text"
-                      name="nome"
-                      value={novo.nome}
-                      placeholder="Nome do medicamento"
-                      onChange={handleChange}
-                    />
-                    <input
-                      type="text"
-                      name="qtd"
-                      value={novo.qtd}
-                      placeholder="Quantidade do medicamento"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="modal-footer">
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="submit" className="btn btn-primary">
-                      Adicionar
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
         <button
           type="button "
           className="btn btn-primary open-modal-button"

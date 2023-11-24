@@ -8,8 +8,12 @@
         height: 50px
         align-items: center
         a
+            color: white
+            text-decoration: none
             &:hover
-                color: #FFF
+                color: $bg-cor1
+                border-bottom: 2px solid $bg-cor1
+                transition: 0.4s
     .banner
         width: 100%
         height: 100%
@@ -32,51 +36,61 @@
                 color: #fff
                 border-radius: 0 0 20px 20px
 
-    .funcionamento
-        margin-top: 1rem
-        padding: 0 1rem
-        header
-            h1
-                color: $bg-cor1
-                text-align: center
-                font-size: calc( $font-size /1.3 )
-        .funcionamento-content
-            .funcionamento-pedido
-                .imagem
+    .all-content
+        width: 100%
+        margin: 1rem auto
+        max-width: 1400px
+        .funcionamento
+            width: 100%
+            margin: 1rem auto
+            padding: 0 1rem
+            header
+                h1
+                    color: $bg-cor1
                     text-align: center
-                    img
-                        width: 300px
-                .texto
-                    p
-                        background-color: $bg-cor1
-                        color: white
-                        padding: 10px
-                        border-radius: 10px
-                        margin: 10px 0
-    .vantagens
-        header
-            text-align: center
-            h1
-                font-size: calc( $font-size /1.3 )
-                color: $bg-cor1
-        .lista
-            ul
-                li
-                    list-style: none
-                    display: flex
-                    align-items: center
-                    text-align: start
-                    gap: 10px
-                    font-size: calc( $font-size/2.5 )
-                    p
-                        margin: 0
+                    font-size: calc( $font-size /1.3 )
+            .funcionamento-content
+                .funcionamento-pedido
+                    .imagem
+                        text-align: center
+                        img
+                            width: 300px
+                    .texto
+                        p
+                            background-color: $bg-cor1
+                            color: white
+                            padding: 10px
+                            border-radius: 10px
+                            margin: 10px 0
+        .vantagens
+            width: 100%
+            margin: 1rem auto
+            header
+                text-align: center
+                h1
+                    font-size: calc( $font-size /1.3 )
+                    color: $bg-cor1
+            .lista
+                ul
+                    li
+                        list-style: none
+                        display: flex
+                        align-items: center
+                        text-align: start
+                        gap: 10px
+                        font-size: calc( $font-size/2.5 )
+                        p
+                            margin: 0
     .contrate
+        width: 100%
         margin-top: 1rem
         padding: 1rem
         text-align: center
         background-color: #181818
         color: #FFF
+        align-self: center
         header
+            margin: 2rem
             p, h1
                 margin: 0
         form
@@ -123,24 +137,19 @@
             img
                 width: 100%
             .title
-                margin: 1rem
                 display: flex
-                flex-direction: row-reverse
+                flex-direction: column
                 h1
-                    text-align: center
-                    height: 170
-                    padding: 1rem
-                    margin: 0
-                    background-color: $bg-cor1
-                    color: #fff
-                    border-radius: 0 20px 20px 0  
+                    background-color: transparent
+                    color: black
+                    width: 800px
+                    margin: 2rem auto
+                    margin-bottom: 0
                 h5
-                    padding: 1rem
-                    height: 180px
-                    background-color: #181818
-                    color: #fff
-                    border-radius: 20px 0 0 20px
-                    margin: 0
+                    border-radius: 10px
+                    width: 1000px
+                    margin: 0 auto
+
 
         .funcionamento
             .funcionamento-content

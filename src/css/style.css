@@ -14,7 +14,6 @@ h1, p {
   margin: 0;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1440px;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -43,7 +42,8 @@ h1, p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  background-color: #1b1b1b;
+  color: white;
 }
 .login-container .header {
   text-align: center;
@@ -52,19 +52,43 @@ h1, p {
   height: 200px;
 }
 .login-container form input {
-  width: 20rem;
-  padding-top: 2rem;
+  width: 350px;
+  height: 50px;
   font-size: 1.3636363636rem;
   outline: none;
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #30acff;
+  text-align: center;
+  background-color: transparent;
+  margin: 10px 0;
+  color: white;
+  transition: 0.4s;
+}
+.login-container form input:focus {
+  background-color: #1d1d1d;
+  border-radius: 10px 10px 0 0;
+  transition: 0.4s;
+  border-bottom: 2px solid #010346;
+}
+.login-container form p {
+  color: red;
+  margin-top: 5px;
+  font-size: 1.1538461538rem;
+  text-shadow: 0 0 3px #FF0000;
 }
 .login-container form button {
-  margin-top: 1rem;
-  width: 20rem;
-  padding: 0.5rem;
+  margin-top: 10px;
+  width: 350px;
+  height: 50px;
+  background-color: #30acff;
   font-size: 1.1111111111rem;
   border: none;
+  transition: 0.4s;
+}
+.login-container form button:hover {
+  background-color: #010346;
+  color: #fff;
+  transition: 0.4s;
 }
 
 .dashboard-container {
@@ -95,7 +119,7 @@ h1, p {
   grid-area: card;
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #546dfc;
+  background-color: #30acff;
   border-radius: 40px 40px 0 0;
   padding: 2rem;
   padding-right: 1rem;
@@ -152,16 +176,42 @@ h1, p {
   }
 }
 .nevegacao-container {
-  background-color: #546dfc;
+  background-color: #1b1b1b;
+}
+.nevegacao-container .navbar .container-fluid .logo img {
+  width: 100px;
 }
 .nevegacao-container .navbar .container-fluid .links-navbar {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 .nevegacao-container .navbar .container-fluid .links-navbar .link-navbar {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
+}
+.nevegacao-container .navbar .container-fluid .links-navbar .link-navbar:hover {
+  border-bottom: 2px solid;
+  transition: 0.4s;
+}
+.nevegacao-container .navbar .botao .myButton {
+  width: 100px;
+  border: none;
+  background-color: #30acff;
+}
+.nevegacao-container .navbar .botao .myButton:hover {
+  background-color: #fff;
+  transition: 0.4s;
+}
+.nevegacao-container .navbar .botao .myButton:hover .myBtn-link {
+  color: #30acff;
+  transition: 0.4s;
+  box-shadow: 1px 1px 10px 1px #FFF;
+}
+.nevegacao-container .navbar .botao .myButton .myBtn-link {
+  text-decoration: none;
+  color: white;
 }
 
 .home-container {
@@ -174,8 +224,14 @@ h1, p {
   height: 50px;
   align-items: center;
 }
+.home-container .sub-nav a {
+  color: white;
+  text-decoration: none;
+}
 .home-container .sub-nav a:hover {
-  color: #FFF;
+  color: #30acff;
+  border-bottom: 2px solid #30acff;
+  transition: 0.4s;
 }
 .home-container .banner {
   width: 100%;
@@ -193,7 +249,7 @@ h1, p {
   text-align: center;
   padding: 1rem;
   margin: 0;
-  background-color: #546dfc;
+  background-color: #30acff;
   color: #fff;
   border-radius: 20px 20px 0 0;
 }
@@ -203,36 +259,46 @@ h1, p {
   color: #fff;
   border-radius: 0 0 20px 20px;
 }
-.home-container .funcionamento {
-  margin-top: 1rem;
+.home-container .all-content {
+  width: 100%;
+  margin: 1rem auto;
+  max-width: 1400px;
+}
+.home-container .all-content .funcionamento {
+  width: 100%;
+  margin: 1rem auto;
   padding: 0 1rem;
 }
-.home-container .funcionamento header h1 {
-  color: #546dfc;
+.home-container .all-content .funcionamento header h1 {
+  color: #30acff;
   text-align: center;
   font-size: 2.3076923077rem;
 }
-.home-container .funcionamento .funcionamento-content .funcionamento-pedido .imagem {
+.home-container .all-content .funcionamento .funcionamento-content .funcionamento-pedido .imagem {
   text-align: center;
 }
-.home-container .funcionamento .funcionamento-content .funcionamento-pedido .imagem img {
+.home-container .all-content .funcionamento .funcionamento-content .funcionamento-pedido .imagem img {
   width: 300px;
 }
-.home-container .funcionamento .funcionamento-content .funcionamento-pedido .texto p {
-  background-color: #546dfc;
+.home-container .all-content .funcionamento .funcionamento-content .funcionamento-pedido .texto p {
+  background-color: #30acff;
   color: white;
   padding: 10px;
   border-radius: 10px;
   margin: 10px 0;
 }
-.home-container .vantagens header {
+.home-container .all-content .vantagens {
+  width: 100%;
+  margin: 1rem auto;
+}
+.home-container .all-content .vantagens header {
   text-align: center;
 }
-.home-container .vantagens header h1 {
+.home-container .all-content .vantagens header h1 {
   font-size: 2.3076923077rem;
-  color: #546dfc;
+  color: #30acff;
 }
-.home-container .vantagens .lista ul li {
+.home-container .all-content .vantagens .lista ul li {
   list-style: none;
   display: flex;
   align-items: center;
@@ -240,15 +306,20 @@ h1, p {
   gap: 10px;
   font-size: 1.2rem;
 }
-.home-container .vantagens .lista ul li p {
+.home-container .all-content .vantagens .lista ul li p {
   margin: 0;
 }
 .home-container .contrate {
+  width: 100%;
   margin-top: 1rem;
   padding: 1rem;
   text-align: center;
   background-color: #181818;
   color: #FFF;
+  align-self: center;
+}
+.home-container .contrate header {
+  margin: 2rem;
 }
 .home-container .contrate header p, .home-container .contrate header h1 {
   margin: 0;
@@ -265,8 +336,8 @@ h1, p {
   height: 50px;
   margin: 5px;
   padding: 5px;
-  color: #546dfc;
-  border: 1px solid #546dfc;
+  color: #30acff;
+  border: 1px solid #30acff;
   background-color: transparent;
   text-align: center;
   outline: none;
@@ -276,7 +347,7 @@ h1, p {
   width: 350px;
   margin: 8px;
   height: 40px;
-  background-color: #546dfc;
+  background-color: #30acff;
   border: none;
   color: white;
 }
@@ -302,26 +373,20 @@ h1, p {
     width: 100%;
   }
   .home-container .banner .title {
-    margin: 1rem;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
   }
   .home-container .banner .title h1 {
-    text-align: center;
-    height: 170;
-    padding: 1rem;
-    margin: 0;
-    background-color: #546dfc;
-    color: #fff;
-    border-radius: 0 20px 20px 0;
+    background-color: transparent;
+    color: black;
+    width: 800px;
+    margin: 2rem auto;
+    margin-bottom: 0;
   }
   .home-container .banner .title h5 {
-    padding: 1rem;
-    height: 180px;
-    background-color: #181818;
-    color: #fff;
-    border-radius: 20px 0 0 20px;
-    margin: 0;
+    border-radius: 10px;
+    width: 1000px;
+    margin: 0 auto;
   }
   .home-container .funcionamento .funcionamento-content .funcionamento-pedido {
     display: flex;
@@ -341,7 +406,7 @@ h1, p {
   width: 100%;
   background-color: #181818;
   color: #fff;
-  padding: 1rem;
+  padding: 3rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -363,7 +428,7 @@ h1, p {
   align-self: center;
   text-align: center;
   padding: 10px 30px;
-  background-color: #546dfc;
+  background-color: #30acff;
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
@@ -371,7 +436,8 @@ h1, p {
 }
 .rodape .duvida a:hover {
   background-color: #fff;
-  color: #546dfc;
+  color: #30acff;
+  transition: 0.4s;
 }
 .rodape .redes {
   width: 100%;
@@ -423,7 +489,7 @@ h1, p {
   height: 40px;
   text-align: center;
   border: none;
-  border-bottom: 2px solid #546dfc;
+  border-bottom: 2px solid #30acff;
   outline: none;
   font-size: 1.2rem;
 }

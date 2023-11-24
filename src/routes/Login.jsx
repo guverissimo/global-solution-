@@ -1,7 +1,7 @@
 import { useState } from "react";
-
+import { BsExclamationCircle } from "react-icons/bs";
 const Login = () => {
-  let [showInfo, setShowInfo] = useState(true);
+  let [showInfo, setShowInfo] = useState(false);
   const [usuarios, setUsuarios] = useState({
     usuario: "",
     senha: "",
@@ -30,9 +30,9 @@ const Login = () => {
             sessionStorage.setItem("usuarioLogado", JSON.stringify(usuarios));
             setTimeout(() => {
               window.location = "/dashboard";
-            }, 500);
+            },);
           }else {
-            setShowInfo(false)
+            setShowInfo(true)
           }
         }
       });
@@ -67,7 +67,7 @@ const Login = () => {
               required
             />
           </div>
-          {!showInfo ? (<p>Credenciais incorretas</p>) : ""}
+          {showInfo == true ? (<p><BsExclamationCircle /> Credenciais incorretas</p>) : ''}
           <button type="submit">Entrar</button>
         </form>
       </div>

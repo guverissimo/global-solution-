@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/style.css";
+import logo from '../assets/Mt_Solution__3_-removebg-preview.png'
 const Navegacao = () => {
   const [usuarioLogado] = useState(
     JSON.parse(sessionStorage.getItem("usuarioLogado"))
@@ -13,9 +14,9 @@ const Navegacao = () => {
     <>
       <div className='nevegacao-container'>
         <nav className="navbar">
-          <div className="container-fluid">
-            <a className="navbar-brand">Navbar</a>
-            <div className="links-navbar">
+          <div className="container-fluid ">
+            <div className="links-navbar ">
+            <Link className="logo" to='/'><img src={logo} alt="" /></Link>
               <Link className="link-navbar" to="/">
                 Home
               </Link>
@@ -27,17 +28,17 @@ const Navegacao = () => {
                 ""
               )}
             </div>
-            <div className="d-flex">
+            <div className="botao d-flex">
               {usuarioLogado != null ? (
                 <button
-                  className="btn btn-primary bg-dark"
+                  className="btn myButton"
                   onClick={handleLogout}
                 >
-                  Logout
+                  <p className="myBtn-link">myBtn-link</p>
                 </button>
               ) : (
-                <button className="btn btn-primary bg-dark">
-                  <Link to="/login">Login</Link>
+                <button className="btn btn-primary myButton">
+                  <Link className="myBtn-link" to="/login">Login</Link>
                 </button>
               )}
             </div>

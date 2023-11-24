@@ -53,59 +53,6 @@
           }
         ]
       }
-    },{
-      "id": 2,
-      "usuario": "sanctamaggiore",
-      "senha": "admin",
-      "nomeHospital": "Hospital Sancta Maggiore Centro-SP",
-      "endereco": "09910120",
-      "cnpjHospital": "00000",
-      "estoque": {
-        "remedios": [
-          {
-            "nome": "ALPRAZOLAM",
-            "razaoSocial": "EUROFARMA LABORATÓRIOS S.A.",
-            "cnpj": "05044984000126",
-            "qtd": 323
-          },
-          {
-            "nome": "ACICLOVIR",
-            "razaoSocial": "SANOFI MEDLEY FARMACÊUTICA LTDA.",
-            "cnpj": "10588595001092",
-            "qtd": 182
-          },
-          {
-            "nome": "GABAPENTINA",
-            "razaoSocial": "LEGRAND PHARMA INDÚSTRIA FARMACÊUTICA LTDA",
-            "cnpj": "05044984000126",
-            "qtd": 90
-          },
-          {
-            "nome": "TOBRAMICINA",
-            "razaoSocial": "GEOLAB INDÚSTRIA FARMACÊUTICA S/A",
-            "cnpj": "03485572000104",
-            "qtd": 58
-          },
-          {
-            "nome": "AZITROMICINA MONOIDRATADA",
-            "razaoSocial": "ANTIBIÓTICOS DO BRASIL LTDA",
-            "cnpj": "05439635000103",
-            "qtd": 172
-          },
-          {
-            "nome": "DIPIRONA SODICA",
-            "razaoSocial": "LABORATÓRIO TEUTO BRASILEIRO S/A",
-            "cnpj": "17159229000176",
-            "qtd": 980
-          },
-          {
-            "nome": "cloridrato de tramadol + paracetamol",
-            "razaoSocial": "EUROFARMA LABORATÓRIOS S.A.",
-            "cnpj": "61190096000192",
-            "qtd": 82
-          }
-        ]
-      }
     }
   ]
 }
