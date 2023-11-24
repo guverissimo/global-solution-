@@ -105,15 +105,15 @@ h1, p {
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: 3rem;
   align-items: center;
   justify-content: start;
   background-color: #1b1b1b;
 }
 .dashboard-container .modal-button .open-modal-button {
   width: 80%;
-  margin: 0 auto;
+  margin: 1rem auto;
   height: 3rem;
-  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 .dashboard-container .remedios-section {
